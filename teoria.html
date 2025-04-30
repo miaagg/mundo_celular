@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reproducción Celular</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css"> <!-- Tu estilo.css personalizado -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<!-- Modal de Bienvenida -->
+<div id="pantallaBienvenida">
+    <h2>Dato Curioso 🧬</h2>
+    <p>¿Sabías que? La mitosis permite que un organismo crezca y repare tejidos.</p>
+    <button onclick="cerrarPopup()">Cerrar</button>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Biología</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="estructura.html">Estructura Celular</a></li>
+            <li class="nav-item"><a class="nav-link" href="teoria.html">Teoría Celular</a></li>
+            <li class="nav-item"><a class="nav-link active" href="organismos.html">Organismos</a></li>
+	    <li class="nav-item"><a class="nav-link" href="comentarios.html">Comentarios y Conclusiones</a></li>
+
+        </ul>
+    </div>
+</nav>
+
+<!-- HEADER -->
+<header>
+    <h1>Reproducción Celular</h1>
+    <p>Descubre cómo las células se dividen y multiplican</p>
+    <p id="reloj"></p>
+</header>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+    <div class="row">
+        <main class="col-md-8">
+            <!-- Mitosis -->
+            <section class="mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Mitosis</h2>
+                        <p>La mitosis es el proceso mediante el cual una célula madre se divide en dos células hijas genéticamente idénticas. Este proceso es fundamental para el crecimiento, desarrollo y reparación de organismos multicelulares.</p>
+                        <ul>
+                            <li><strong>Profase:</strong> El ADN se condensa y forma cromosomas visibles.</li>
+                            <li><strong>Metafase:</strong> Los cromosomas se alinean en el centro de la célula.</li>
+                            <li><strong>Anafase:</strong> Las cromátidas hermanas se separan hacia polos opuestos.</li>
+                            <li><strong>Telofase:</strong> Se forman dos núcleos nuevos y la célula se prepara para dividirse.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Meiosis -->
+            <section class="mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Meiosis</h2>
+                        <p>La meiosis es una forma especial de división celular que produce células sexuales (óvulos y espermatozoides) con la mitad del número de cromosomas de la célula original.</p>
+                        <p>Este proceso incluye dos divisiones celulares consecutivas y genera variabilidad genética.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Comparación -->
+            <section class="mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Comparación entre Mitosis y Meiosis</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Aspecto</th>
+                                    <th>Mitosis</th>
+                                    <th>Meiosis</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tipo de célula</td>
+                                    <td>Somáticas</td>
+                                    <td>Sexuales</td>
+                                </tr>
+                                <tr>
+                                    <td>Divisiones</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Células hijas</td>
+                                    <td>2 idénticas</td>
+                                    <td>4 diferentes</td>
+                                </tr>
+                                <tr>
+                                    <td>Variabilidad genética</td>
+                                    <td>No</td>
+                                    <td>Sí</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ASIDES -->
+        <aside class="col-md-4">
+            <div class="mb-4">
+                <aside>
+                    <h4>Datos Interesantes 🔍</h4>
+                    <ul>
+                        <li>La meiosis es esencial para la reproducción sexual.</li>
+                        <li>El cáncer está relacionado con errores en la mitosis.</li>
+                        <li>Algunas células, como las neuronas, no se dividen.</li>
+                    </ul>
+                </aside>
+            </div>
+
+            <div>
+                <aside>
+                    <h4>Recursos Extra 📘</h4>
+                    <p><strong>Lecturas:</strong></p>
+                    <ul>
+                        <li><a href="https://es.khanacademy.org/science/biology" target="_blank">Khan Academy - Biología</a></li>
+                        <li><a href="https://medlineplus.gov/spanish/genetica.html" target="_blank">MedlinePlus - Genética</a></li>
+                    </ul>
+                    <hr>
+                    <p><strong>Videos:</strong></p>
+                    <iframe src="https://www.youtube.com/embed/Ii1pCAbX2bc" title="Mitosis y Meiosis explicadas" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/Q6ucKWIIFmg" title="División Celular para niños" allowfullscreen></iframe>
+                </aside>
+            </div>
+        </aside>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2025 Mundo Celular - Todos los derechos reservados</p>
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+    function actualizarReloj() {
+        const tiempo = new Date();
+        let h = tiempo.getHours();
+        let m = tiempo.getMinutes();
+        let s = tiempo.getSeconds();
+        m = m < 10 ? "0" + m : m;
+        s = s < 10 ? "0" + s : s;
+        document.getElementById("reloj").textContent = h + ":" + m + ":" + s;
+    }
+    setInterval(actualizarReloj, 1000);
+
+    function cerrarPopup() {
+        document.getElementById("pantallaBienvenida").style.display = "none";
+    }
+
+    window.onload = function () {
+        document.getElementById("pantallaBienvenida").style.display = "flex";
+    };
+</script>
+
+</body>
+</html>

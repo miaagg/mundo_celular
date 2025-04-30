@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Comentarios y Conclusiones</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css"> <!-- Tu propio CSS -->
+    <style>
+        .tema-claro { background-color: #ffffff; color: #000000; }
+        .tema-oscuro { background-color: #222; color: #f1f1f1; }
+        .card { margin-bottom: 20px; }
+        .comentario-box { background: #f8f9fa; padding: 15px; border-radius: 8px; }
+    </style>
+</head>
+<body class="tema-claro">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Biología</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="estructura.html">Estructura Celular</a></li>
+            <li class="nav-item"><a class="nav-link" href="teoria.html">Teoría Celular</a></li>
+            <li class="nav-item"><a class="nav-link" href="organismos.html">Organismos</a></li>
+            <li class="nav-item"><a class="nav-link active" href="comentarios.html">Comentarios y Conclusiones</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HEADER -->
+<header class="text-center p-4">
+    <h1>Comentarios y Conclusiones</h1>
+    <p>Reflexiones finales y participación de los lectores</p>
+    <button onclick="cambiarTema()" class="btn btn-secondary mt-2">Cambiar Tema</button>
+</header>
+
+<!-- CONTENIDO -->
+<div class="container">
+    <!-- Conclusiones -->
+    <section class="card p-4">
+        <h2>Conclusiones Finales</h2>
+        <p>El estudio de la célula y su reproducción es esencial para comprender el funcionamiento de los seres vivos. Conocer procesos como la mitosis y la meiosis nos ayuda a entender la base del crecimiento, la reproducción y la evolución.</p>
+        <p>La biología celular no solo nos enseña sobre lo microscópico, sino que también nos conecta con los grandes procesos que rigen la vida.</p>
+    </section>
+
+    <!-- Formulario de comentarios -->
+    <section class="card p-4">
+        <h2>Deja tu Comentario</h2>
+        <form id="formularioComentario">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="comentario">Comentario:</label>
+                <textarea id="comentario" class="form-control" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Publicar</button>
+        </form>
+    </section>
+
+    <!-- Comentarios Publicados -->
+    <section class="card p-4">
+        <h2>Comentarios</h2>
+        <div id="comentariosContainer">
+            <p>No hay comentarios todavía. ¡Sé el primero en opinar!</p>
+        </div>
+    </section>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center mt-4">
+    <p>&copy; 2025 Mundo Celular - Todos los derechos reservados</p>
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+    // Cambiar tema claro / oscuro
+    function cambiarTema() {
+        const body = document.body;
+        body.classList.toggle("tema-claro");
+        body.classList.toggle("tema-oscuro");
+    }
+
+    // Agregar comentario
+    const form = document.getElementById("formularioComentario");
+    const container = document.getElementById("comentariosContainer");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const nombre = document.getElementById("nombre").value;
+        const texto = document.getElementById("comentario").value;
+
+        const nuevoComentario = document.createElement("div");
+        nuevoComentario.classList.add("comentario-box", "mb-3");
+        nuevoComentario.innerHTML = `<strong>${nombre}:</strong> <p>${texto}</p>`;
+        container.prepend(nuevoComentario);
+
+        form.reset();
+    });
+</script>
+
+</body>
+</html>
